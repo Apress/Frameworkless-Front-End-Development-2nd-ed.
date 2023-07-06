@@ -1,6 +1,6 @@
 ﻿Freeware License, some rights reserved
 
-Copyright (c) 2022 Francesco Strazzullo
+Copyright (c) 2019 Francesco Strazzullo
 
 Permission is hereby granted, free of charge, to anyone obtaining a copy 
 of this software and associated documentation files (the "Software"), 
