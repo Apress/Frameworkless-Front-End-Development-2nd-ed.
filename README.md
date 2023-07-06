@@ -1,6 +1,6 @@
 # Apress Source Code
 
-This repository accompanies [*Frameworkless Front-End Development 2nd ed.*](https://www.link.springer.com/book/10.1007/%eisbn%) by Francesco (Apress, 2022).
+This repository accompanies [*Frameworkless Front-End Development 2nd ed.*](https://www.link.springer.com/book/10.1007/%eisbn%) by Francesco Strazzullo (Apress, 2023).
 
 [comment]: #cover
 ![Cover image](978-1-4842-8810-8.jpg)
