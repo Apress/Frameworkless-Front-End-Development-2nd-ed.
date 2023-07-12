@@ -1,7 +1,3 @@
-const cloneDeep = x => {
-  return JSON.parse(JSON.stringify(x))
-}
-
 const INITIAL_STATE = {
   todos: [],
   currentFilter: 'All'
@@ -122,7 +118,7 @@ const methods = {
 export default (initalState = INITIAL_STATE) => {
   return (prevState, event) => {
     if (!prevState) {
-      return cloneDeep(initalState)
+      return window.structuredClone(initalState)
     }
 
     const currentModifier = methods[event.type]

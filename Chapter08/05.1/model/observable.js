@@ -1,13 +1,9 @@
-const cloneDeep = x => {
-  return JSON.parse(JSON.stringify(x))
-}
-
-const freeze = state => Object.freeze(cloneDeep(state))
+const freeze = state => Object.freeze(window.structuredClone(state))
 
 export default (initialState) => {
   let listeners = []
 
-  const proxy = new Proxy(cloneDeep(initialState), {
+  const proxy = new Proxy(window.structuredClone(initialState), {
     set: (target, name, value) => {
       target[name] = value
       listeners.forEach(l => l(freeze(proxy)))

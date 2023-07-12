@@ -1,8 +1,4 @@
-const cloneDeep = x => {
-  return JSON.parse(JSON.stringify(x))
-}
-
-const freeze = state => Object.freeze(cloneDeep(state))
+const freeze = state => Object.freeze(window.structuredClone(state))
 
 export default (model) => {
   let listeners = []

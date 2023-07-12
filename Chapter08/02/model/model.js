@@ -1,16 +1,12 @@
 import observableFactory from './observable.js'
 
-const cloneDeep = x => {
-  return JSON.parse(JSON.stringify(x))
-}
-
 const INITIAL_STATE = {
   todos: [],
   currentFilter: 'All'
 }
 
 export default (initalState = INITIAL_STATE) => {
-  const state = cloneDeep(initalState)
+  const state = window.structuredClone(initalState)
 
   const addItem = text => {
     if (!text) {

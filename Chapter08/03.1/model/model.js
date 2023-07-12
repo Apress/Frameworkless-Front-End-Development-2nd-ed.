@@ -1,10 +1,6 @@
 import todosModifers from './todos.js'
 import filterModifers from './filter.js'
 
-const cloneDeep = x => {
-  return JSON.parse(JSON.stringify(x))
-}
-
 const INITIAL_STATE = {
   todos: [],
   currentFilter: 'All'
@@ -13,7 +9,7 @@ const INITIAL_STATE = {
 export default (initalState = INITIAL_STATE) => {
   return (prevState, event) => {
     if (!event) {
-      return cloneDeep(initalState)
+      return window.structuredClone(initalState)
     }
 
     const {

@@ -1,8 +1,4 @@
-const cloneDeep = x => {
-  return JSON.parse(JSON.stringify(x))
-}
-
-const freeze = x => Object.freeze(cloneDeep(x))
+const freeze = x => Object.freeze(window.structuredClone(x))
 
 const INITIAL_STATE = {
   todos: [],
@@ -10,7 +6,7 @@ const INITIAL_STATE = {
 }
 
 export default (initalState = INITIAL_STATE) => {
-  const state = cloneDeep(initalState)
+  const state = window.structuredClone(initalState)
   let listeners = []
 
   const addChangeListener = listener => {

@@ -1,17 +1,13 @@
-const cloneDeep = x => {
-  return JSON.parse(JSON.stringify(x))
-}
-
 const INITIAL_STATE = {
   todos: [],
   currentFilter: 'All'
 }
 
 export default (initalState = INITIAL_STATE) => {
-  const state = cloneDeep(initalState)
+  const state = window.structuredClone(initalState)
 
   const getState = () => {
-    return Object.freeze(cloneDeep(state))
+    return Object.freeze(window.structuredClone(state))
   }
 
   const addItem = text => {
